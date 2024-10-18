@@ -1,7 +1,10 @@
-let express = require("express");
-let { addpro } = require("../Controllers/procont");
-let proute = new express.Router();
+let express = require("express") 
+let { addprod,getprod } = require("../Controllers/procont") 
 
-proute.post('/addprod', addpro);
+let proute = new express.Router() 
 
-module.exports = proute;
+proute.post('/addprod', addprod) 
+proute.get('/getprod',getprod) 
+
+
+module.exports = proute 

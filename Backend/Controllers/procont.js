@@ -1,16 +1,26 @@
-// In ../Controllers/procont.js
-let promodel = require("../Models/prodmodel");
-let { v4: uuidv4 } = require("uuid");
+let promodel = require("../Models/prodmodel") 
+let { v4: uuidv4 } = require("uuid") 
 
-let addpro = async (req, res) => {
+let addprod = async (req, res) => {
     try {
-        let data = new promodel({ ...req.body, "_id": uuidv4() });
-        await data.save();
-        res.json("Product has been added!");
+        let data = new promodel({ ...req.body, "_id": uuidv4() }) 
+        await data.save() 
+        res.json("Product has been added!") 
     } catch (err) {
-        console.log(err);
-        res.status(500).json("Error adding product");
+        res.json("Error in Adding the Product") 
     }
-};
+} 
 
-module.exports = { addpro }; // Export as an object
+let getprod=async(req,res)=>{
+  try
+  {
+       let data=await promodel.find()
+       res.json(data)
+  }
+  catch(err)
+  {
+    res.json({"msg":"error in fetching the product"})
+  }
+}
+
+module.exports = {addprod ,getprod}
