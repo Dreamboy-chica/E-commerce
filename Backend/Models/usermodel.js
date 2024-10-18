@@ -1,7 +1,7 @@
 let mongoose = require("mongoose")
 
 let usersch = new mongoose.Schema({
-  "_id": String ,
+  "_id": String , //email-id
   "name": String,
   "pwd": String,
   "phno": String,

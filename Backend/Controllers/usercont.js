@@ -4,6 +4,7 @@ let jwt=require("jsonwebtoken")
 
 let reg=async(req,res)=>{
 
+
     try
     {
         let obj=await userm.findById({"_id":req.body._id})
@@ -47,7 +48,7 @@ try
    }
    else
    {
-    re.json({"msg":"Invalid Email ID"})
+    res.json({"msg":"Invalid Email ID"})
    }
 }
 
