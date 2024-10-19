@@ -1,11 +1,17 @@
+const path = require("path");
 let express = require("express") 
 let app = express() 
 let mongoose = require("mongoose") 
 let cors = require("cors") 
+let bodyParser=require("body-parser")
+
 let port = 1234 
 
 app.use(express.json()) 
 app.use(cors()) 
+app.use(bodyParser.urlencoded({"extended":true}))
+app.use('/Prodimg', express.static(path.join(__dirname, 'Prodimg'))); // Add this line
+
 
 let route = require("./Routes/userroute") 
 let proute = require("./Routes/prodroute") 
