@@ -4,21 +4,21 @@ let jwt=require("jsonwebtoken")
 
 let reg=async(req,res)=>{
 
-
     try
     {
         let obj=await userm.findById({"_id":req.body._id})
 
         if(obj)
         {
-            res.json("Email Id already exists")
+            res.json({"msg":"Email Id already exists"})
         }
         else
         {
             let hash=await bcrypt.hash(req.body.pwd,10)
             let data=new userm({...req.body,"pwd":hash})
             await data.save()
-            res.json("Registration done !")
+
+            res.json({"msg":"Registration done !"})
         }
     }
 
