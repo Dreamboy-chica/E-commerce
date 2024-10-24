@@ -25,17 +25,40 @@ const Register = () => {
   })
  }
   return (
-    <div className='regwrapper'>
-      <div className='regsub'>
-        <div>{msg}</div>
-        <input type='text' placeholder='enter email' name="_id" value={data._id} onChange={fun}/>
-        <input type='text' placeholder='enter name' name="name" value={data.name} onChange={fun}/>
-        <input type='password' placeholder='enter password' name="pwd" value={data.pwd} onChange={fun}/>
-        <input type='text' placeholder='enter phno' name="phno" value={data.phno} onChange={fun}/>
-        <button onClick={reg}>Register</button>
-      </div> 
 
+    <div className="d-flex justify-content-center align-items-center vh-100">
+    <div className="card">
+    <div className="card-body">
+
+      <h2 className="py-3">Register</h2>
+      
+      <div className='msg text-danger my-3'>{msg}</div>
+     
+    <div className="mb-2">
+    <input type='text' className="form-control" placeholder='Enter Email' name="_id" value={data._id} onChange={fun}/>
+    </div>        
+    
+    <div className="mb-2">
+    <input type='text' className="form-control" placeholder='Enter Name' name="name" value={data.name} onChange={fun}/>
+    </div>        
+    
+
+    <div className="mb-2">
+    <input type='password' className="form-control" placeholder='Enter Password' name="pwd" value={data.pwd} onChange={fun}/>
+    </div>   
+
+    <div className="mb-2">
+    <input type='text' className="form-control"  placeholder='Enter Phno' name="phno" value={data.phno} onChange={fun}/>
+    </div>        
+
+    <button type="submit" className="btn" >
+    <span onClick={reg}>Register</span>
+     </button>      
+     
+     </div> 
     </div>
+    </div>
+
   )
 }
 

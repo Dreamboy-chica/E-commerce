@@ -28,7 +28,7 @@ const Nav = () => {
        {obj.store.token!=""&&  <Link to='/cart'><i className="fa-solid fa-cart-shopping px-2"></i>Cart</Link>}
        {obj.store.token && (
   <div>
-    {obj.store.name.split(' ')[0]} {obj.store.name.split(' ').pop()[0].toUpperCase()}
+    {obj.store.name.split(' ')[0][0].toUpperCase() + obj.store.name.split(' ')[0].slice(1).toLowerCase()} {obj.store.name.split(' ').pop()[0].toUpperCase()}
   </div>
 )}
 

@@ -33,14 +33,31 @@ const Register = () => {
   })
 }
   return (
-    <div className='regwrapper'>
-      <div className='regsub'>
-        <div>{msg}</div>
-        <input type='text' placeholder='Enter Your Email-id' name="_id" value={data._id} onChange={fun}/>
-        <input type='password' placeholder='Enter Your Password' name="pwd" value={data.pwd} onChange={fun}/>
-        <button onClick={login}>Login</button>
-      </div> 
 
+    <div className="d-flex justify-content-center align-items-center vh-100">
+
+    <div className="card">
+    <div className="card-body">
+
+      <div className='msg text-danger my-3'>{msg}</div>
+
+
+
+    <div className="mb-2">
+    <input type='text' className="form-control" placeholder='Enter Email' name="_id" value={data._id} onChange={fun}/>
+    </div>   
+
+    <div className="mb-2">
+    <input type='password' className="form-control" placeholder='Enter Password' name="pwd" value={data.pwd} onChange={fun}/>
+    </div>         
+    
+    
+    <button type="submit" className="btn" >
+    <span onClick={login}>Login</span>
+    </button>   
+
+      </div> 
+      </div>
     </div>
   )
 }

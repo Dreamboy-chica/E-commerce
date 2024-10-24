@@ -8,7 +8,6 @@ import Cart from './Cart'
 import Login from './Login'
 import { useState } from 'react'
 import Addprod from './Addprod'
-// import Carousal from './Carousal'
 
 
 const App = () => {
@@ -26,7 +25,6 @@ const App = () => {
       <Ct.Provider value={obj}> 
       <Nav/>
 
-      {/* <Carousal/> */}
       <Routes>
 
         <Route path='/'  element={<Home/>} />
