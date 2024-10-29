@@ -43,12 +43,11 @@ const Addprod = () => {
 
           <select onChange={fundata} value={data.cat} name="cat" className='cat'>    
             <option selected disabled value="">Select Category</option>
-            <option value="Women">Women</option>    
-            <option value="Men">Men</option>
-            <option value="Kids">Kids</option>
+            <option value="Clothing">Clothing</option>    
             <option value="Electronics">Electronics</option>
-            <option value="Books">Books</option>
             <option value="Beauty">Beauty</option>
+            <option value="Books">Books</option>
+            <option value="Decoration">Decoration</option>
             <option value="Food">Food</option>
             <option value="others">Others</option>
           </select>

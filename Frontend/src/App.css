@@ -103,24 +103,35 @@
   margin-top:30px;
 }
 
-.subnav li{
+.subnav .heffect{
   list-style-type:none;
   border:1px solid rgb(121, 117, 117);
   border-radius:5px;
   padding:8px 20px;
 }
 
+.subnav a{
+  text-decoration:none;
+  color:rgb(94, 90, 90);
+}
+
 .subnav .heffect:hover{
   color:white;
-  background-color:rgb(94, 192, 196);
+  background-color:rgb(135, 189, 190);
   font-weight:bold;
   cursor: pointer;
 }
 
-.activee{
-  background-color:rgb(58, 54, 54);
-  color:white;
+.activee {
+  list-style-type:none;
+  border:1px solid rgb(121, 117, 117);
+  border-radius:5px;
+  padding:8px 20px;
+  background-color:rgb(100, 97, 97);
 }
+
+.activee{color:white}
+
 
 .activee :hover{
   background-color:rgb(58, 54, 54);
@@ -370,9 +381,7 @@ select:focus {
   gap:80px;
 }
 
-.tamount{
-  /* border:1px solid red; */
-}
+
 
 .del{
    border:none;
@@ -409,8 +418,44 @@ select:focus {
   margin:0px 10px;
   border:1px solid grey;
   font-weight:bold;
+}
+
+.special-message {
+  color:red; /* or any color you prefer */
+  font-weight: bold;
+  padding-top: -10px;
+}
+
+.diwali{
+  background-color:rgb(204,12,57);
+  color:white;
+  padding:5px 52px;
+
+  font-size:12px;
+  border-radius:4px;
+}
+
+.pagination{
+ display:flex;
+ justify-content:center;
+ align-items: center;
+}
+
+.pagination button{
+  color:white;
+  width:40px;
+  margin:2px;
+  border:1px solid black;
+  border-radius:2px;
+  background-color:rgb(59, 58, 58);
+}
+
+.pagination button:hover{
+ font-weight:bold;
+ background-color:rgb(27, 26, 26);
 
 }
+
 
 
 

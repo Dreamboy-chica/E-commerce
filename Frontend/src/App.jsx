@@ -8,6 +8,16 @@ import Cart from './Cart'
 import Login from './Login'
 import { useState } from 'react'
 import Addprod from './Addprod'
+import Clothing from './Clothing'
+import Electronics from './Electronics'
+import Beauty from './Beauty'
+import Books from './Books'
+import Decoration from './Decoration'
+import Food from './Food'
+
+
+
+
 
 
 const App = () => {
@@ -30,11 +40,20 @@ const App = () => {
         <Route path='/'  element={<Home/>} />
         <Route path='/reg'  element={<Register/>} />
         <Route path='/login'  element={<Login/>} />
+
         <Route path='/logout'  element={<Logout/>} />
         <Route path='/cart'  element={<Cart/>} />
         <Route path='/addprod' element={<Addprod/>}/>
-      
 
+        <Route path='/clothing' element={<Clothing/>}/>
+        <Route path='/electronics' element={<Electronics/>}/>
+        <Route path='/beauty' element={<Beauty/>}/>
+
+        <Route path='/books' element={<Books/>}/>
+        <Route path='/decoration' element={<Decoration/>}/>
+        <Route path='/food' element={<Food/>}/>
+
+      
       </Routes>
       </Ct.Provider>
 

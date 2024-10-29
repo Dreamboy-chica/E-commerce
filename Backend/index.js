@@ -6,12 +6,10 @@ let cors = require("cors")
 let bodyParser=require("body-parser")
 
 let port = 1234 
-
 app.use(express.json()) 
 app.use(cors()) 
 app.use(bodyParser.urlencoded({"extended":true}))
 app.use('/Prodimg', express.static(path.join(__dirname, 'Prodimg'))); // Add this line
-
 
 let route = require("./Routes/userroute") 
 let proute = require("./Routes/prodroute") 
@@ -29,7 +27,6 @@ mongoose
 
 app.use("/", route) 
 app.use("/", proute) 
-
 app.listen(port, () => {
   console.log(`Server has started on Port ${port}`) 
 }) 

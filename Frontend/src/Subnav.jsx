@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 const Subnav = () => {
   return (
@@ -10,16 +11,14 @@ const Subnav = () => {
 
     <div className="subnav">
             <ul>
-                <li className="activee">All</li>
-                <li className="heffect">Clothing</li>
-                <li className="heffect">Electronics</li>
-                <li className="heffect">Beauty</li>
-                <li className="heffect">Books</li>
-                <li className="heffect">Decoration</li>
-                <li className="heffect">Food</li>
-                <li className="heffect">Rating 4+</li>
 
-
+                <div to='/' className="activee">All</div>
+                <Link  to='/clothing' className="heffect">Clothing</Link>
+                <Link  to='/electronics'        className="heffect">Electronics</Link>
+                <Link  to='/beauty'  className="heffect">Beauty</Link>
+                <Link   to='/books'  className="heffect">Books</Link>
+                <Link   to='/decoration'  className="heffect">Decoration</Link>
+                <Link  to='/food'  className="heffect">Food</Link>
 
             </ul>
         </div>
